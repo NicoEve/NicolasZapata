@@ -34,7 +34,7 @@ def game():
         
         if result is not None and result == answer:
             score += 1  # Increase score by 1 for each correct answer
-            print('Correct!!')
+            print('Perfecto socio')
         else:
             print('Incorrect')
     
