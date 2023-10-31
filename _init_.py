@@ -1,10 +1,10 @@
-from operations import modulo
+from operations import add
 
 def game():
     score = 0
     while True:
         print('======== Menu ========'
-            '\n1. Modulo'
+            '\n1. Add'
             '\n0. Exit')
         option = int(input('\nChoose an option: '))
         if option == 0:
@@ -13,9 +13,9 @@ def game():
         num_2 = int(input('Enter second number: '))
         answer = int(input('Enter your answer: '))
         if option == 1:
-            result = modulo(num_1, num_2)
-            if result is not None and result == answer:
-                score += 4  
+            result = add(num_1, num_2)
+            if result == answer:
+                score += 1 
                 print('Correct!!')
             else:
                 print('Incorrect')
