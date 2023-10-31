@@ -1,20 +1,20 @@
-from operations import power
+from operations import modulo
 
 def game():
     score = 0
     while True:
         print('======== Menu ========'
-            '\n1. Power'
+            '\n1. Modulo'
             '\n0. Exit')
         option = int(input('\nChoose an option: '))
         if option == 0:
             break
-        num_1 = int(input('Enter base number: '))
-        num_2 = int(input('Enter exponent number: '))
+        num_1 = int(input('Enter first number: '))
+        num_2 = int(input('Enter second number: '))
         answer = int(input('Enter your answer: '))
         if option == 1:
-            result = power(num_1, num_2)
-            if result == answer:
+            result = modulo(num_1, num_2)
+            if result is not None and result == answer:
                 score += 4  
                 print('Correct!!')
             else:
