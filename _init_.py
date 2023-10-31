@@ -1,24 +1,26 @@
-from operations import rest
+from operations import multiply
+
 def game():
     score = 0
     while True:
         print('======== Menu ========'
-            '\n1. rest'
+            '\n1. Multiply'
             '\n0. Exit')
-        option = int(input('\nChoice an option: '))
+        option = int(input('\nChoose an option: '))
         if option == 0:
             break
-        num_1 = input('Enter first number: ')
-        num_2 = input('Enter second number: ')
-        answer = int(input('Enter you answer: '))
+        num_1 = int(input('Enter first number: '))
+        num_2 = int(input('Enter second number: '))
+        answer = int(input('Enter your answer: '))
         if option == 1:
-            result = rest(num_1, num_2)
+            result = multiply(num_1, num_2)
             if result == answer:
-                score += 1
+                score += 2  # Increase score by 2 for each correct answer
                 print('Correct!!')
             else:
                 print('Incorrect')
     print(f'======== Game Over ========'
-        f'\nYou score is {score}'
+        f'\nYour score is {score}'
         '\nKeep going!')
+
 game()
